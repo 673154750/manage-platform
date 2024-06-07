@@ -60,4 +60,5 @@ postcss用于处理scss和其他css预处理器
 
 husky
 1,安装husky： pnpm install -D husky
-2,执行初始化husky npx husky init
+2,执行初始化husky npx husky init 生成.husky文件，修改pre-commit钩子
+
