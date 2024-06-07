@@ -76,3 +76,8 @@ commitLint 规范提交commit信息
 新增：
 [commit]
 template = ./../manage-platform/commit-msg.txt （相对路径或绝对路径）
+
+lint-stage
+1，安装 pnpm install lint-staged -D
+2,在package.json文件中增加内容  "lint-staged"配置
+3,修改pre-commit中脚本，执行lint-staged
