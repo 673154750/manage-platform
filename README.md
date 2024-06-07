@@ -62,3 +62,17 @@ husky
 1,安装husky： pnpm install -D husky
 2,执行初始化husky npx husky init 生成.husky文件，修改pre-commit钩子
 
+commitLint 规范提交commit信息
+1,安装commitlint pnpm add @commitlint/config-conventional @commitlint/cli -D
+2,添加配置文件，commitlint.config.cjs
+3,配置执行命令 "commitlint": "commitlint --config commitlint.config.cjs -e -V",
+4,配置husky npx husky add .husky/commit-msg (husky9.0之前版本)
+9.0+ echo "npx --no-install commitlint -e $HUSKY_GIT_PARAMS" > .husky/commit-msg
+注：执行echo方式适合linux、mac，与window有差异，需要在git bash环境下执行，它是类似Unix的环境
+否则报错：.husky/commit-msg: .husky/commit-msg: cannot execute binary file 尝试执行的文件不是一个有效的可执行文件
+5,修改commit-msg脚本 补充执行命令
+6，增加commit-msg默认模板:
+在.git文件下打开并编辑config文件
+新增：
+[commit]
+template = ./../manage-platform/commit-msg.txt （相对路径或绝对路径）

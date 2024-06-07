@@ -12,8 +12,8 @@ export default [
   {
     rules: {
       'no-var': 'error',
-      'no-unexpected-multiline':'error',
-      "no-multi-spaces": "error",
+      'no-unexpected-multiline': 'error',
+      'no-multi-spaces': 'error'
     }
   }
 ];

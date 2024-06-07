@@ -1,4 +1,6 @@
 #!/bin/sh
 
 . "$(dirname -- "$0")/_/husky.sh"
-pnpm run format
+
+# 直接修改format不会使commit失败，会直接提交代码，格式化的文件需要重新add
+pnpm run format && pnpm run lint

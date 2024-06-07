@@ -1,12 +1,7 @@
 <script setup lang="ts">
-let aa = 123
+let aa = 123;
 
-console.log( 'aaaaaa'
-
-
-
-
-    );
+console.log('aaaaaa');
 </script>
 
 <template>
@@ -18,7 +13,7 @@ console.log( 'aaaaaa'
 </template>
 
 <style scoped lang="scss">
-.box    {
+.box {
   width: 100px;
 }
 </style>
